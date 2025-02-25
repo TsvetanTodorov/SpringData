@@ -19,11 +19,17 @@ public class User {
     @Basic
     private int age;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Account> accounts;
 
 
     public User() {
         this.accounts = new ArrayList<>();
+    }
+
+    public User(String username, int age, List<Account> accounts) {
+        this.username = username;
+        this.age = age;
+        this.accounts = accounts;
     }
 }

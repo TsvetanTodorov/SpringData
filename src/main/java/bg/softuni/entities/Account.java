@@ -19,4 +19,8 @@ public class Account {
 
     public Account() {
     }
+
+    public Account(BigDecimal balance) {
+        this.balance = balance;
+    }
 }
